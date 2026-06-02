@@ -1,16 +1,9 @@
-# Production environment composition variables.
-# Promotion to prod requires bumping this version in a PR and getting it
-# through the production environment's required-reviewer gate.
-
 aws_region    = "us-east-1"
 model_version = "1.0.0"
-
-# Same as dev: populated per session from bootstrap outputs. See pre-req
-# setup snippet in LAB_GUIDE.md / README.md.
 image_uri             = "REPLACE_ME_FROM_CONTAINERIZE_JOB"
 image_digest          = "REPLACE_ME_FROM_CONTAINERIZE_JOB"
-model_artifact_s3_uri = "s3://REPLACE_BUCKET/fraud-detector/model.tar.gz"
-model_artifact_bucket = "REPLACE_BUCKET"
-vpc_id                = "REPLACE_FROM_BOOTSTRAP_OUTPUT"
-private_subnet_ids    = ["REPLACE_FROM_BOOTSTRAP_OUTPUT_0", "REPLACE_FROM_BOOTSTRAP_OUTPUT_1"]
-kms_key_arn           = "REPLACE_FROM_BOOTSTRAP_OUTPUT"
+model_artifact_s3_uri = "s3://nfcu-s1-models-kodekloud-org-2026-f61dac64/fraud-detector/model.tar.gz"
+model_artifact_bucket = "nfcu-s1-models-kodekloud-org-2026-f61dac64"
+vpc_id                = "vpc-0bfece146badf4306"
+private_subnet_ids    = ["subnet-0a101f1dc4683b3d8","subnet-06b84738a523563cb","subnet-05d63d49b9f55b2a0"]
+kms_key_arn           = "arn:aws:kms:us-east-1:637423283722:key/bf8e296c-402c-4184-8e11-8a0f1131272d"
